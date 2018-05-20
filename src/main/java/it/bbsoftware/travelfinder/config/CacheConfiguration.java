@@ -42,6 +42,15 @@ public class CacheConfiguration {
             cm.createCache(it.bbsoftware.travelfinder.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(it.bbsoftware.travelfinder.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(it.bbsoftware.travelfinder.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Agenzia.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Agenzia.class.getName() + ".sedes", jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Indirizzo.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.Job.class.getName(), jcacheConfiguration);
+            cm.createCache(it.bbsoftware.travelfinder.domain.JobHistory.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,47 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myJobHistoryLabel" jhiTranslate="travelfinderApp.jobHistory.home.createOrEditLabel">Create or edit a Job History</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!jobHistory.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="jobHistory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="travelfinderApp.jobHistory.startDate" for="field_startDate">Start Date</label>
+            <div class="d-flex">
+                <input id="field_startDate" type="datetime-local" class="form-control" name="startDate" [(ngModel)]="jobHistory.startDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="travelfinderApp.jobHistory.endDate" for="field_endDate">End Date</label>
+            <div class="d-flex">
+                <input id="field_endDate" type="datetime-local" class="form-control" name="endDate" [(ngModel)]="jobHistory.endDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="travelfinderApp.jobHistory.language" for="field_language">Language</label>
+            <select class="form-control" name="language" [(ngModel)]="jobHistory.language" id="field_language" >
+                <option value="FRENCH">{{'travelfinderApp.Language.FRENCH' | translate}}</option>
+                <option value="ENGLISH">{{'travelfinderApp.Language.ENGLISH' | translate}}</option>
+                <option value="SPANISH">{{'travelfinderApp.Language.SPANISH' | translate}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

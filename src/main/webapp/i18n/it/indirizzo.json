@@ -1,0 +1,27 @@
+
+{
+    "travelfinderApp": {
+        "indirizzo" : {
+            "home": {
+                "title": "Indirizzos",
+                "createLabel": "Genera un nuovo Indirizzo",
+                "createOrEditLabel": "Genera o modifica un Indirizzo"
+            },
+            "created": "&Egrave; stato generato un nuovo Indirizzo con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Indirizzo identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Indirizzo con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Indirizzo {{ id }}?"
+            },
+            "detail": {
+                "title": "Indirizzo"
+            },
+            "indirizzo": "Indirizzo",
+            "citta": "Citta",
+            "provincia": "Provincia",
+            "cap": "Cap",
+            "regione": "Regione",
+            "agenzia": "Agenzia"
+        }
+    }
+}

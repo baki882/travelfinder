@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "jobTitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "minSalary",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maxSalary",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180520090918",
+    "entityTableName": "job",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "tf"
+}
