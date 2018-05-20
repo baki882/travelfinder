@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="travelfinderApp.indirizzo.home.title">Indirizzos</span>
+        <button class="btn btn-primary float-right jh-create-entity create-indirizzo-tf" [routerLink]="['/', { outlets: { popup: ['indirizzo-tf-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="travelfinderApp.indirizzo.home.createLabel">
+            Create new Indirizzo
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="indirizzos">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.indirizzo">Indirizzo</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.citta">Citta</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.provincia">Provincia</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.cap">Cap</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.regione">Regione</span></th>
+            <th><span jhiTranslate="travelfinderApp.indirizzo.agenzia">Agenzia</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let indirizzo of indirizzos ;trackBy: trackId">
+                <td><a [routerLink]="['../indirizzo-tf', indirizzo.id ]">{{indirizzo.id}}</a></td>
+                <td>{{indirizzo.indirizzo}}</td>
+                <td>{{indirizzo.citta}}</td>
+                <td>{{indirizzo.provincia}}</td>
+                <td>{{indirizzo.cap}}</td>
+                <td>{{indirizzo.regione}}</td>
+                <td>
+                    <div *ngIf="indirizzo.agenziaId">
+                        <a [routerLink]="['../agenzia-tf', indirizzo.agenziaId  ]" >{{indirizzo.agenziaId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../indirizzo-tf', indirizzo.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'indirizzo-tf/'+ indirizzo.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'indirizzo-tf/'+ indirizzo.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

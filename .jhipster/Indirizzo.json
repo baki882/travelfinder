@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "agenzia",
+            "otherEntityName": "agenzia",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "indirizzo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "citta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "provincia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cap",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regione",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180520090914",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "indirizzo",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "tf"
+}

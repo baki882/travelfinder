@@ -1,0 +1,23 @@
+
+{
+    "travelfinderApp": {
+        "agenzia" : {
+            "home": {
+                "title": "Agenzias",
+                "createLabel": "Create a new Agenzia",
+                "createOrEditLabel": "Create or edit a Agenzia"
+            },
+            "created": "A new Agenzia is created with identifier {{ param }}",
+            "updated": "A Agenzia is updated with identifier {{ param }}",
+            "deleted": "A Agenzia is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Agenzia {{ id }}?"
+            },
+            "detail": {
+                "title": "Agenzia"
+            },
+            "nome": "Nome",
+            "sede": "Sede"
+        }
+    }
+}
